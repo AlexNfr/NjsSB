@@ -6,13 +6,12 @@ var http = require('http'),
     url = require('url'),
     qs = require('querystring');
 var PORT = 3200;
-var query, params;
-var a, b, r;
 
 function onRequest(req, response) {
-    var incomingRequest,
-        summatorTitle = 'Online Summator Service ver. 0.1 (c) 2016 by AlexNfr\n\n',
+    var summatorTitle = 'Online Summator Service ver. 0.1 (c) 2016 by AlexNfr\n\n',
         helpMessage = '  Usage: localhost:3200[?a=<num1>[&b=<num2>]]\n\n'
+    var query, params;
+    var a, b, r;
 
     response.writeHead(200, {'Content-Type': 'text/plain; charset=utf8'});
     response.write(summatorTitle + helpMessage);
